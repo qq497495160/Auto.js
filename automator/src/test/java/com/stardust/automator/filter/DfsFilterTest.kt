@@ -22,19 +22,19 @@ class DfsFilterTest {
             return mRandom.nextBoolean()
         }
     }
-
-    @Test
-    @Throws(Exception::class)
-    fun filter() {
-        val filter = RandomFilter()
-        val root = TestUiObject(10)
-        val list = DFS(filter).search(root)
-        for (uiObject in list) {
-            if (root !== uiObject)
-                uiObject.recycle()
-        }
-        println(TestUiObject.max)
-        assertEquals(1, TestUiObject.count.toLong())
-    }
+//
+//    @Test
+//    @Throws(Exception::class)
+//    fun filter() {
+//        val filter = RandomFilter()
+//        val root = TestUiObject(10)
+//        val list = DFS(filter).search(root)
+//        for (uiObject in list) {
+//            if (root !== uiObject)
+//                uiObject.recycle()
+//        }
+//        println(TestUiObject.max)
+//        assertEquals(1, TestUiObject.count.toLong())
+//    }
 
 }
